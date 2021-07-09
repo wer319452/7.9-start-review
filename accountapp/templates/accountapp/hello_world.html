@@ -3,7 +3,13 @@
 {% block content %}
 
     <div style="text-align: center; margin: 2rem;">
-        <h1>Hello world!!!</h1>
+        <h1>METHOD</h1>
+
+        <form action="/accounts/hello_world/", method="post">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-dark rounded-pill px-4">
+        </form>
+        <h3>{{ text }}</h3>
     </div>
 
 {% endblock %}
